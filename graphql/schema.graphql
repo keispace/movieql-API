@@ -1,0 +1,24 @@
+#datasource
+type Movie {
+    id: Int!
+    title: String!
+    rating: Float!
+    summary: String!
+    language: String!
+    medium_cover_image: String!
+}
+
+type Detail {
+     id: Int!
+    title: String!
+    rating: Float!
+    description_intro:String!
+
+}
+type Query { 
+    movies(limit:Int, rating:Float): [Movie]!
+    movie(id:Int): Detail!
+    suggestions(id:Int!): [Movie]!
+
+}
+
